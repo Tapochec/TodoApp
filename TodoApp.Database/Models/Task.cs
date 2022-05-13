@@ -12,20 +12,20 @@ namespace TodoApp.Database.Model
         public int Id { get; set; }
 
         [Required]
-        public TaskList TaskListId { get; set; }
+        public TaskList TaskList { get; set; }
 
         [Required]
         [Column(TypeName = "nvarchar(100)")]
         public string Name { get; set; }
 
         [Column(TypeName = "nvarchar(2000)")]
-        public string Desc { get; set; }
+        public string? Desc { get; set; }
 
         [Required]
         [DefaultValue(false)]
         public bool Completed { get; set; }
 
-        public DateTime CompletionDt { get; set; }
+        public DateTime? CompletionDt { get; set; }
 
         //[Required]
         //[DefaultValue(false)]

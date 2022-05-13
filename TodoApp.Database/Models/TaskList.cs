@@ -11,15 +11,15 @@ namespace TodoApp.Database.Model
         public int Id { get; set; }
 
         [Required]
-        public User UserId { get; set; }
+        public User User { get; set; }
 
-        public ListGroup TaskGroupId { get; set; }
+        public ListGroup? TaskGroup { get; set; }
 
         [Required]
         [Column(TypeName = "nvarchar(50)")]
         public string Name { get; set; }
 
         //[Column(TypeName = "varchar(6)")]
-        //public string Color { get; set; }
+        //public string? Color { get; set; }
     }
 }

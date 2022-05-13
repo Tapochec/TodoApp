@@ -11,7 +11,7 @@ namespace TodoApp.Database.Model
         public int Id { get; set; }
 
         [Required]
-        public User UserId { get; set; }
+        public User User { get; set; }
 
         [Required]
         [Column(TypeName = "nvarchar(50)")]
