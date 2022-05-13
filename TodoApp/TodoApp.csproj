@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TodoApp.Database\TodoApp.Database.csproj" />
+  </ItemGroup>
+
 </Project>
