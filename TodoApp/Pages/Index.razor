@@ -1,5 +1,25 @@
 ﻿@page "/"
+@using Model = TodoApp.Database.Model
+@using TodoApp.Database.Model
+@inject TodoDbContext Db
 
 <PageTitle>Index</PageTitle>
 
-<h1>Hello, world!</h1>
+<div class="tasks-list">
+    @foreach(Model.Task task in GetList())
+    {
+        <div class="task">
+            @task.Name
+        </div>
+    }
+</div>
+
+@code {
+
+    private List<Model.Task> GetList()
+    {
+        List<Model.Task> tasks = Db.Tasks.ToList();
+
+        return tasks;
+    }
+}

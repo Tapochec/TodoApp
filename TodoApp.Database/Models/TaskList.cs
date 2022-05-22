@@ -12,8 +12,10 @@ namespace TodoApp.Database.Model
 
         [Required]
         public User User { get; set; }
+        public int UserId { get; set; }
 
         public ListGroup? TaskGroup { get; set; }
+        public int? TaskGroupId { get; set; }
 
         [Required]
         [Column(TypeName = "nvarchar(50)")]

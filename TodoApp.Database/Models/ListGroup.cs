@@ -12,6 +12,7 @@ namespace TodoApp.Database.Model
 
         [Required]
         public User User { get; set; }
+        public int UserId { get; set; }
 
         [Required]
         [Column(TypeName = "nvarchar(50)")]

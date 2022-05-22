@@ -13,6 +13,7 @@ namespace TodoApp.Database.Model
 
         [Required]
         public TaskList TaskList { get; set; }
+        public int TaskListId { get; set; }
 
         [Required]
         [Column(TypeName = "nvarchar(100)")]
