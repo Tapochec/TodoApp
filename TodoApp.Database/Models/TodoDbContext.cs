@@ -47,5 +47,15 @@ namespace TodoApp.Database.Model
             );
             #endregion
         }
+
+        /// <summary>
+        /// Получение всех задач для списка
+        /// </summary>
+        public List<Task> GetTasksByListId(int taskListId)
+        {
+            return Tasks
+                .Where(t => t.TaskListId == taskListId)
+                .ToList();
+        }
     }
 }

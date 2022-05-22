@@ -18,7 +18,7 @@
 
     private List<Model.Task> GetList()
     {
-        List<Model.Task> tasks = Db.Tasks.ToList();
+        List<Model.Task> tasks = Db.GetTasksByListId(2);
 
         return tasks;
     }
